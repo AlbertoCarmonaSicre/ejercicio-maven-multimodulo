@@ -2,6 +2,11 @@ package com.helloworld;
 
 public class CalculatorService {
 
+    private final BasicOperationsService operationsService;
+
+    public CalculatorService() {
+        this.operationsService = new BasicOperationsService();
+    }
     public void runCalculator() {
         while (true) {
             ConsoleIO.print("Select an operation:");
@@ -48,7 +53,7 @@ public class CalculatorService {
             int num1 = Integer.parseInt(ConsoleIO.readInput());
             ConsoleIO.print("Enter second number:");
             int num2 = Integer.parseInt(ConsoleIO.readInput());
-            ConsoleIO.print("Sum result: " + (num1 + num2));
+            ConsoleIO.print("Sum result: " + operationsService.sum(num1, num2));
         } catch (NumberFormatException e) {
             ConsoleIO.print("Invalid number. Please enter valid integers.");
         }
