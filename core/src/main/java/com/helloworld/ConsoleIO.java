@@ -13,9 +13,4 @@ public class ConsoleIO {
     public static String readInput() {
         return scanner.nextLine();
     }
-
-    public static void main(String[] args) {
-        CalculatorService calculatorService = new CalculatorService();
-        calculatorService.runCalculator();
-    }
 }
