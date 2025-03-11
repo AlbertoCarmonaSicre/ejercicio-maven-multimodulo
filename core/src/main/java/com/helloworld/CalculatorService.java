@@ -2,10 +2,10 @@ package com.helloworld;
 
 public class CalculatorService {
 
-    private final BasicOperationsService operationsService;
+    private BasicOperationsService operationsService;
 
-    public CalculatorService(BasicOperationsService operationsService) {
-        this.operationsService = operationsService;
+    public CalculatorService(){
+        this.operationsService = new BasicOperationsService();
     }
 
     public void runCalculator() {
